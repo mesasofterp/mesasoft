@@ -222,17 +222,25 @@ jQuery(document).ready(function($) {
 	// navigation
 	var OnePageNavigation = function() {
 		var navToggler = $('.site-menu-toggle');
-		$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-			e.preventDefault();
+		$("body").on("click", ".main-menu li a[href*='#'], .smoothscroll[href*='#'], .site-mobile-menu .site-nav-wrap li a[href*='#']", function(e) {
+			var $this = $(this);
+			var targetUrl = $this.attr('href');
+			var targetHash = "#" + targetUrl.split('#')[1];
+			var currentPath = window.location.pathname.split('/').pop();
+			var targetPath = targetUrl.split('#')[0];
 
-			var hash = this.hash;
+			if (targetPath !== '' && targetPath !== currentPath && targetPath !== 'index.html') {
+				return;
+			}
 
-			$('html, body').animate({
-				'scrollTop': $(hash).offset().top
-			}, 600, 'easeInOutCirc', function(){
-				window.location.hash = hash;
-			});
-
+			if ($(targetHash).length) {
+				e.preventDefault();
+				$('html, body').animate({
+					'scrollTop': $(targetHash).offset().top - 70
+				}, 600, 'easeInOutCirc', function(){
+					// window.location.hash = targetHash;
+				});
+			}
 		});
 	};
 	OnePageNavigation();
@@ -255,5 +263,52 @@ jQuery(document).ready(function($) {
 
 	};
 	siteScroll();
+
+	// Mobile tap-to-flip for service cards
+	var bindFlipCards = function() {
+		$('.flip-card').each(function(){
+			var $card = $(this);
+			$card.off('click.flip').on('click.flip', function(e){
+				// Prevent following links immediately on tap; allow second tap to follow
+				if (!$(e.target).is('a')) {
+					e.preventDefault();
+				}
+				$card.toggleClass('is-flipped');
+			});
+		});
+		// Close when tapping outside on mobile
+		$(document).off('click.flipOutside').on('click.flipOutside', function(e){
+			if (!$(e.target).closest('.flip-card').length) {
+				$('.flip-card.is-flipped').removeClass('is-flipped');
+			}
+		});
+	};
+	bindFlipCards();
+
+	// Products: tap/click & keyboard flip accessibility
+	var bindProductFlips = function() {
+		$('.product-flip').each(function(){
+			var $card = $(this);
+			$card.off('click.prod').on('click.prod', function(e){
+				if (!$(e.target).is('a')) { e.preventDefault(); }
+				$card.toggleClass('is-flipped');
+				$card.attr('aria-pressed', $card.hasClass('is-flipped') ? 'true' : 'false');
+			});
+			$card.off('keydown.prod').on('keydown.prod', function(e){
+				// Enter or Space toggles flip for keyboard users
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					$card.toggleClass('is-flipped');
+					$card.attr('aria-pressed', $card.hasClass('is-flipped') ? 'true' : 'false');
+				}
+			});
+		});
+		$(document).off('click.prodOutside').on('click.prodOutside', function(e){
+			if (!$(e.target).closest('.product-flip').length) {
+				$('.product-flip.is-flipped').removeClass('is-flipped').attr('aria-pressed','false');
+			}
+		});
+	};
+	bindProductFlips();
 
 });
