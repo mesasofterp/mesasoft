@@ -58,6 +58,201 @@ body {
 				top: 56px;
 			}
 		}
+		
+		/* Mobil optimizasyonları */
+		@media (max-width: 768px) {
+			body {
+				padding-top: 100px !important;
+			}
+			
+			#main-product-section {
+				grid-template-columns: 1fr !important;
+				gap: 0 !important;
+				padding: 0 !important;
+			}
+			
+			#main-product-section > div:first-child {
+				padding: 40px 20px 20px 20px !important;
+				min-height: auto !important;
+			}
+			
+			#main-product-section h1 {
+				font-size: 1.8rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#main-product-section p {
+				font-size: 1rem !important;
+				margin-bottom: 15px !important;
+			}
+			
+			iframe {
+				width: 100% !important;
+				height: 200px !important;
+				max-width: 100% !important;
+			}
+			
+			.modern-demo-btn {
+				padding: 14px 30px !important;
+				font-size: 1rem !important;
+			}
+			
+			.modern-features-box {
+				max-width: 100% !important;
+				margin: 0 !important;
+				border-radius: 0 !important;
+				padding: 20px 15px !important;
+			}
+			
+			.modern-features-title {
+				font-size: 1.3rem !important;
+				margin-bottom: 15px !important;
+			}
+			
+			.modern-features-list {
+				gap: 15px !important;
+			}
+			
+			.modern-features-list li {
+				padding: 12px 10px !important;
+			}
+			
+			.modern-feature-text {
+				font-size: 1rem !important;
+			}
+			
+			.modern-feature-icon {
+				font-size: 1.8rem !important;
+				padding: 8px !important;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			#main-product-section h1 {
+				font-size: 1.6rem !important;
+			}
+			
+			#main-product-section p {
+				font-size: 0.95rem !important;
+			}
+			
+			iframe {
+				height: 180px !important;
+			}
+			
+			.modern-demo-btn {
+				padding: 12px 25px !important;
+				font-size: 0.95rem !important;
+			}
+			
+			.modern-features-title {
+				font-size: 1.2rem !important;
+			}
+			
+			.modern-feature-text {
+				font-size: 0.95rem !important;
+			}
+			
+			.modern-feature-icon {
+				font-size: 1.6rem !important;
+			}
+		}
+		
+		/* Alt bölümler için mobil optimizasyonları */
+		@media (max-width: 768px) {
+			#ozel-section {
+				flex-direction: column !important;
+				padding: 20px 15px !important;
+				border-radius: 0 !important;
+			}
+			
+			#ozel-section > div:first-child {
+				flex: none !important;
+				padding: 0 !important;
+				margin-bottom: 20px !important;
+			}
+			
+			#ozel-section h2 {
+				font-size: 1.6rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#ozel-section p {
+				font-size: 1rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#ozel-section ul {
+				font-size: 0.95rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#ozel-section > div:last-child {
+				flex: none !important;
+				padding: 0 !important;
+				min-height: auto !important;
+			}
+			
+			#ozel-section img {
+				width: 100% !important;
+				height: 250px !important;
+				min-height: 250px !important;
+				max-width: 100% !important;
+				object-fit: cover !important;
+			}
+			
+			.scroll-bar-container {
+				padding: 12px 0 !important;
+			}
+			
+			.scroll-bar {
+				height: 40px !important;
+				padding: 6px 0 !important;
+			}
+			
+			.animated-btn {
+				min-width: 90px !important;
+				font-size: 0.8rem !important;
+				padding: 3px 6px !important;
+			}
+			
+			.animated-btn span {
+				font-size: 0.8rem !important;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			#ozel-section {
+				padding: 15px 10px !important;
+			}
+			
+			#ozel-section h2 {
+				font-size: 1.4rem !important;
+			}
+			
+			#ozel-section p {
+				font-size: 0.9rem !important;
+			}
+			
+			#ozel-section ul {
+				font-size: 0.85rem !important;
+			}
+			
+			#ozel-section img {
+				height: 200px !important;
+				min-height: 200px !important;
+			}
+			
+			.animated-btn {
+				min-width: 80px !important;
+				font-size: 0.75rem !important;
+				padding: 2px 4px !important;
+			}
+			
+			.animated-btn span {
+				font-size: 0.75rem !important;
+			}
+		}
 		.program-list li.animated-btn {
 			background: #fff;
 			margin-bottom: 20px;
@@ -376,146 +571,46 @@ body {
 	</section>
 <div class="scroll-bar-container" style="width:100vw; overflow:hidden; position:relative; border-radius:0; box-shadow:none; background:linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%); margin-bottom:0;">
 	<div id="scrollBar" class="scroll-bar" style="display:flex; gap:10px; width:max-content; animation:scrollBarAnim 30s linear infinite; padding:8px 0; min-height:36px; align-items:center; justify-content:center; height:48px;">
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f9f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
+		<a href="restoran-cafe-bar.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></a>
+		<a href="hizli-satis.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></a>
+		<a href="genel-muhasebe.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f9f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></a>
+		<a href="wolvox-erp.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></a>
+		<a href="wolvox-crm.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></a>
+		<a href="restoran-cafe-bar.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></a>
+		<a href="hizli-satis.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></a>
+		<a href="genel-muhasebe.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></a>
+		<a href="wolvox-erp.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></a>
+		<a href="wolvox-crm.html" class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; text-decoration:none; display:inline-block; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></a>
 	</div>
 </div>
 <script>
 // Otomatik kayan bar için JS gerekmez. Bar CSS animasyonu ile sürekli akacak.
 </script>
 
-<footer class="site-footer pro-footer">
-	<div class="container">
-		<div class="row align-items-start">
-			<div class="col-lg-4 mb-4 mb-lg-0">
-				<div class="d-flex flex-column align-items-start mb-3" style="gap:6px; width:100%; max-width:260px;">
-					<img src="images/logo/akinlogo.png" alt="AKINSOFT" style="height:54px; width:100%; max-width:260px; margin-bottom:2px; filter: drop-shadow(0 2px 8px #b5c9e8); display:block;">
-					<img src="images/logo/mesalogo.png" alt="Mesa Soft" style="height:54px; width:100%; max-width:260px; filter: drop-shadow(0 2px 8px #b5c9e8); display:block;">
-				</div>
-				<h2 class="footer-heading mb-3" style="color:#0a2342; font-size:1.15rem; font-weight:700; letter-spacing:.02em;">Mesa Soft Hakkında</h2>
-				<p style="color:#21325e; font-size:1.01rem;">Mesa Soft, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir iş ortağıdır. AKINSOFT İstanbul Bölge Bayisi olarak ERP ve e-Dönüşüm çözümleri sunar.</p>
-				<div class="footer-social mb-4">
-					<a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
-					<a href="#" aria-label="Twitter"><span class="icon-twitter"></span></a>
-					<a href="https://www.instagram.com/mesasoftofficial?igsh=MW1hcDAwc3N2dDU4dw%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><span class="icon-instagram"></span></a>
-					<a href="https://www.linkedin.com/company/mesasoft/" aria-label="LinkedIn" target="_blank" rel="noopener"><span class="icon-linkedin"></span></a>
-				</div>
-			</div>
-			<div class="col-lg-2 mb-4 mb-lg-0">
-				<h2 class="footer-heading mb-3">Hızlı Menü</h2>
-				<ul class="list-unstyled pro-footer-menu">
-					<li><a href="about.html">Hakkımızda</a></li>
-					<li><a href="#services-section">Çözümlerimiz</a></li>
-					<li><a href="#blog-section">Blog</a></li>
-					<li><a href="contact.html">İletişim</a></li>
-				</ul>
-			</div>
-			<div class="col-lg-3 mb-4 mb-lg-0">
-				<h2 class="footer-heading mb-3">Ürünler</h2>
-				<ul class="list-unstyled pro-footer-menu">
-					<li><a href="#">WOLVOX ERP</a></li>
-					<li><a href="#">e-Dönüşüm</a></li>
-					<li><a href="#">Sektörel Çözümler</a></li>
-					<li><a href="#">Tüm Ürünler</a></li>
-				</ul>
-			</div>
-			<div class="col-lg-3">
-				<h2 class="footer-heading mb-3">İletişim</h2>
-				<ul class="list-unstyled pro-footer-contact">
-					<li class="mb-2"><span class="icon-map-marker mr-2"></span>Akros İstanbul, Barbaros Hayrettin Paşa, 1995. Sk. No:1-3 Kat:29 Daire No:472, 34522 Esenyurt/İstanbul</li>
-					<li class="mb-2"><span class="icon-phone mr-2"></span><a href="tel:+905414555837">0541 455 58 37</a></li>
-					<li class="mb-2"><span class="icon-envelope mr-2"></span><a href="mailto:info@mesasoft.com.tr">info@mesasoft.com.tr</a></li>
-				</ul>
-				<div class="mt-3 d-flex align-items-start"><span class="icon-clock-o mr-2"></span>
-					<div>
-						<div>Pazartesi-Cuma: 09:00–18:00</div>
-						<div>Cumartesi: 12:00–16:00</div>
-						<div>Pazar: <span style="color:#f87171;font-weight:600;">Kapalı</span></div>
-					</div>
-				</div>
-			</div>
+<script src="footer-component.js"></script>
 		</div>
-		<div class="row pt-4 mt-4 text-center">
-			<div class="col-md-12">
-				<div class="border-top pt-4" style="border-color:rgba(255,255,255,.15) !important;">
-					<p class="mb-0" style="color:#0a2342; letter-spacing:.01em; font-size:1.05rem; font-weight:600;">Copyright ©2025 Mesa Soft. Tüm Hakları Saklıdır.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<style>
-		.pro-footer {
-			background: linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%);
-			color: #21325e;
-			padding-top: 48px;
-			padding-bottom: 24px;
-			font-size: 1.01rem;
-		}
-		.pro-footer .footer-heading {
-			color: #0a2342;
-			font-size: 1.08rem;
-			font-weight: 700;
-			margin-bottom: 1.1rem;
-			letter-spacing: .01em;
-		}
-		.pro-footer p, .pro-footer address, .pro-footer ul, .pro-footer li, .pro-footer a {
-			color: #21325e;
-			font-size: 1.01rem;
-			opacity: 0.97;
-		}
-		.pro-footer a:hover {
-			color: #0a2342;
-			text-decoration: underline;
-		}
-		.pro-footer .pro-footer-menu a {
-			color: #21325e;
-			transition: color .2s;
-		}
-		.pro-footer .pro-footer-menu a:hover {
-			color: #0a2342;
-		}
-		.pro-footer .pro-footer-contact a {
-			color: #21325e;
-			font-weight: 500;
-		}
-		.pro-footer .pro-footer-contact a:hover {
-			color: #0a2342;
-		}
-		.pro-footer .footer-social {
-			display: flex;
-			gap: 12px;
-			margin-top: 10px;
-		}
-		.pro-footer .footer-social a {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 38px;
-			height: 38px;
-			border-radius: 50%;
-			background: #fff;
-			box-shadow: 0 2px 8px rgba(10,35,66,0.07);
-			color: #0a2342;
-			font-size: 1.3rem;
-			transition: background .2s, color .2s;
-		}
-		.pro-footer .footer-social a:hover {
-			background: #0a2342;
-			color: #fff;
-		}
-		.pro-footer .border-top {
-			border-top: 1px solid rgba(10,35,66,.12) !important;
-		}
-	</style>
-</footer>
-		</div>
+<!-- scripts.html -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jarallax.min.js"></script>
+<script src="js/jarallax-element.min.js"></script>
+<script src="js/lozad.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/ParticleHead.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/main.js"></script>
 
 		</body>
